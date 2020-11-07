@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background: rgba(154, 205, 50, 0.4);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 15px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider .slider-track {
+  display: flex;
+  transition: all 0.3s ease;
+  touch-action: pan-y;
+}
+.slider .slider-track .slider-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.slider .slider-track .slider-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+.slider .slider-navs .slider-prev,
+.slider .slider-navs .slider-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  background: rgba(30, 144, 255, 0.76);
+}
+.slider .slider-navs .slider-prev {
+  left: 15px;
+}
+.slider .slider-navs .slider-next {
+  right: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
