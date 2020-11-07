@@ -171,7 +171,34 @@ class Slider {
     };
 };
 
+class Tabs {
+    constructor(selector) {
+        this.parent = document.querySelector(selector);
+    }
+
+    init() {
+        let shortcuts = this.parent.querySelector('.tab-shortcuts'),
+            tabs = this.parent.querySelector('.tabs'),
+            shortcutsArray = [].slice.call(shortcuts.children),
+            tabsArray = [].slice.call(tabs.children);
+
+        shortcutsArray.forEach( (shortcut, index) => {
+            shortcut.addEventListener('click', () => {
+                let activeShortcut = shortcuts.querySelector('.active'),
+                    activeTab = tabs.querySelector('.active');
+                activeShortcut.classList.remove('active');
+                activeTab.classList.remove('active');
+                shortcut.classList.add('active');
+                tabsArray[index].classList.add('active');
+            });
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     let mySlider = new Slider('.slider');
     mySlider.init();
+
+    let myTabs = new Tabs('.tabs-wrapper');
+    myTabs.init();
 });
