@@ -90,4 +90,30 @@ body {
   display: block;
 }
 
+.accordion-wrapper .accordion-item:not(:first-child) {
+  margin-top: 1px;
+}
+.accordion-wrapper .accordion-item.active .accordion-item-title {
+  background: #ff8558bf;
+  border-radius: 10px 10px 0px 0px;
+}
+.accordion-wrapper .accordion-item.active .accordion-item-body {
+  display: block;
+}
+.accordion-wrapper .accordion-item .accordion-item-title {
+  border-radius: 10px 10px 10px 10px;
+  background: rgba(72, 72, 72, 0.4);
+  padding: 10px 15px;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+.accordion-wrapper .accordion-item .accordion-item-body {
+  background: white;
+  padding: 15px;
+  border: 2px solid #000000;
+  border-radius: 0px 0px 10px 10px;
+  display: none;
+  margin-top: -2px;
+}
+
 /*# sourceMappingURL=style.css.map */

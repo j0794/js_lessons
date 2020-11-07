@@ -195,10 +195,31 @@ class Tabs {
     }
 }
 
+class Accordion {
+    constructor(selector) {
+        this.parent = document.querySelector(selector);
+    }
+
+    init() {
+        let items = this.parent.querySelector('.accordion-items');
+
+        for (let item of items.children) {
+            item.querySelector('.accordion-item-title').addEventListener('click', () => {
+                let activeItem = items.querySelector('.active');
+                activeItem.classList.remove('active');
+                item.classList.add('active');
+            });
+        };
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     let mySlider = new Slider('.slider');
     mySlider.init();
 
     let myTabs = new Tabs('.tabs-wrapper');
     myTabs.init();
+
+    let myAccordion = new Accordion('.accordion-wrapper');
+    myAccordion.init();
 });
