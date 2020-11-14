@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 15px auto;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+}
+
+.banner {
+  margin-bottom: 10px;
+}
+.banner img {
+  max-width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.menu-wrapper.not-ready .submenu {
+  display: none;
+}
+.menu-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-wrapper ul.menu {
+  padding: 5px;
+  display: flex;
+  background: #00bfff;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+.menu-wrapper ul.menu.nowrap {
+  flex-wrap: nowrap;
+}
+.menu-wrapper ul.submenu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: auto;
+  width: 200px;
+  background: #5bd5ff;
+  border: 1px solid #424242;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.menu-wrapper ul.submenu.left {
+  right: 0;
+  left: auto;
+}
+.menu-wrapper ul.submenu .submenu {
+  left: 100%;
+  right: auto;
+}
+.menu-wrapper ul.submenu .submenu.left {
+  right: 100%;
+  left: auto;
+}
+.menu-wrapper li {
+  flex-shrink: 0;
+  position: relative;
+}
+.menu-wrapper li.active > a {
+  background: #7fff00;
+}
+.menu-wrapper li.active > .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+.menu-wrapper a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  overflow-wrap: break-word;
+}
+.menu-wrapper a:hover {
+  background: #7fff00;
+}
+.menu-wrapper .more-item {
+  margin-left: auto;
+}
+
+@media (max-width: 429px) {
+  .menu-wrapper ul.submenu .submenu {
+    left: 0;
+    right: auto;
+  }
+  .menu-wrapper ul.submenu .submenu.left {
+    right: 0;
+    left: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
