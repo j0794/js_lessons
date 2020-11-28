@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Lesson 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <h1>JS Lesson 3</h1>
+    <h2>Calculator</h2>
+    <div class="calc">
+        <div class="calc-history"></div>
+        <div class="calc-result">0</div>
+        <div class="calc-buttons">
+            <div class="calc-button-row">
+                <button class="calc-button" data-digit="7">7</button>
+                <button class="calc-button" data-digit="8">8</button>
+                <button class="calc-button" data-digit="9">9</button>
+                <button class="calc-button" data-operation="reset">C</button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button" data-digit="4">4</button>
+                <button class="calc-button" data-digit="5">5</button>
+                <button class="calc-button" data-digit="6">6</button>
+                <button class="calc-button" data-operation="division">&#247;</button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button" data-digit="1">1</button>
+                <button class="calc-button" data-digit="2">2</button>
+                <button class="calc-button" data-digit="3">3</button>
+                <button class="calc-button" data-operation="multiplication">&#215;</button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button" data-digit="0">0</button>
+                <button class="calc-button" data-operation="float">.</button>
+                <button class="calc-button" data-operation="sign_change">+ / -</button>
+                <button class="calc-button" data-operation="subtraction">-</button>
+            </div>
+            <div class="calc-button-row">
+                <button class="calc-button cols-2" data-operation="equal">=</button>
+                <button class="calc-button" data-operation="erase_last">&#8592;</button>
+                <button class="calc-button" data-operation="addition">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
